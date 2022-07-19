@@ -6,6 +6,12 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, \
 
 # Create your models here.
 
+Gender = (
+    ('MALE', 'Male'),
+    ('FEMALE', 'Female'),
+    ('PREFER_NOT_SAY', 'Prefer Not to Say'),
+)
+
 class UserManager(BaseUserManager):
     def create_superuser(self, email, first_name, last_name, password, **other_fields):
         """Create and save a new superuser"""
