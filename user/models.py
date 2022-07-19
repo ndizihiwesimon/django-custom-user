@@ -49,13 +49,11 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     telephone = models.CharField(max_length=20, blank=False, null=False)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-    is_patient = models.BooleanField(default=False)
-    is_doctor = models.BooleanField(default=False)
-    is_scheduler = models.BooleanField(default=False)
+ 
 
     objects = UserManager()
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['first_name', 'last_name']
+    REQUIRED_FIELDS = []
 
     def full_name(self):
         return self.first_name + " " + self.last_name
