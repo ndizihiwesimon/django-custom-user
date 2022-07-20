@@ -11,7 +11,6 @@ Gender = (
     ('FEMALE', 'Female'),
     ('PREFER_NOT_SAY', 'Prefer Not to Say'),
 )
-
 class UserManager(BaseUserManager):
     def create_superuser(self, email, first_name, last_name, password, **other_fields):
         """Create and save a new superuser"""
